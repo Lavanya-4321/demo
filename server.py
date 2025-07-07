@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 import util
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return send_file("index.html")
+
 
 
 @app.route('/classify_image', methods=['GET', 'POST'])
