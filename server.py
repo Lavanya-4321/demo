@@ -20,6 +20,7 @@ def serve_js():
 
 @app.route('/classify_image', methods=['GET', 'POST'])
 def classify_image():
+    util.load_saved_artifacts()
     image_data = request.form['image_data']
 
     response = jsonify(util.classify_image(image_data))
@@ -30,5 +31,5 @@ def classify_image():
 
 if __name__ == "__main__":
     print("Starting Python Flask Server For Sports Celebrity Image Classification")
-    util.load_saved_artifacts()
+    
     app.run(port=5000)
