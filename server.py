@@ -7,12 +7,6 @@ app = Flask(__name__)
 def home():
     return send_file("index.html")
 
-@app.route('/app.css')
-def serve_css():
-    return send_from_directory('.', 'app.css')
-@app.route('/app.js')
-def serve_js():
-    return send_from_directory('.', 'app.js')
 
 
 
