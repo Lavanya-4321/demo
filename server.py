@@ -8,7 +8,8 @@ util.load_saved_artifacts()
 
 @app.route('/')
 def home():
-    return send_file("index.html")
+    return render_template("index.html")
+
 
 
 
